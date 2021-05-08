@@ -1,0 +1,30 @@
+#timer {
+    position: relative;
+    display: flex;
+    justify-content :flex-end;
+    margin-right: 20px;
+}
+
+form {
+    display: none;
+}
+
+li {
+    padding: 3px;
+    margin-bottom: 5px;
+    width: 100%;
+    background-color: rgb(70, 20, 70);
+    color: white;
+}
+ol {
+    display: none;
+}
+#divForCenter {
+    font-weight: bold;
+    font-size: 24px;
+    text-align: center;
+}
+#lister {
+    width: 20%;
+    margin: 0 auto;
+}
