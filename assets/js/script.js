@@ -65,7 +65,7 @@ function setTimer () {
             timerField.textContent = "Time: " + timer;
     
             if(timer === 0) {
-                // You Lose Logic
+                gameEnd();
                 clearInterval(timerInterval);
             }
         }
