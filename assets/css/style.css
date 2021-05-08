@@ -20,11 +20,32 @@ ol {
     display: none;
 }
 #divForCenter {
-    font-weight: bold;
-    font-size: 24px;
+    margin-top: 30px;
     text-align: center;
 }
 #lister {
     width: 20%;
     margin: 0 auto;
+}
+a {
+    text-decoration: none;
+    color: teal;
+    font-weight: bold;
+}
+
+#highscoreArea {
+    font-weight: bold;
+    font-size: 24px;
+    text-align: center;
+    margin-top: 50px;
+}
+
+#infoArea {
+    align-content: center;
+    display: flex;
+    justify-content: center;
+}
+
+#info {
+    width: 40%;
 }

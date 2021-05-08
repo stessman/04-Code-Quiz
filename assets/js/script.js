@@ -14,6 +14,7 @@ let answerFields = document.querySelectorAll("li");
 let answerItems = document.querySelector("#answers");
 let correctWrongArea = document.querySelector("#correctWrongArea");
 let userScoreField = document.querySelector("#userScoreField");
+let initialsForm = document.querySelector("#initialsForm");
 let timer;
 let userGuess;
 let getQuestionInfo;
@@ -25,7 +26,7 @@ answerItems.addEventListener("click", handleAnswerClick);
 
 // Resets the page for a new quiz
 function init() {
-    // Need to display questionArea again
+    startButton.style.display = "none";
     gameOver = false;
     timer = 75;
     questionNumber = 0;
@@ -84,7 +85,7 @@ function verifyUserGuess () {
     if(userGuess === correctAnswer) {
         correctWrongArea.innerHTML = "Correct!";
     }else {
-        timer = timer - 5;
+        timer = timer - 10;
         correctWrongArea.innerHTML = "Wrong!";
     }
 }
@@ -96,12 +97,12 @@ function clearCorrectWrongArea () {
 
 // Once the user is done with the quiz they are brought to the game end screen to place their score.
 function gameEnd() {
+    initialsForm.style.display = "inline";
     gameOver = true;
     score = timer;
     questionArea.style.display = "none";
     questionField.innerHTML = "All Done!";
     userScoreField.innerHTML = "Your final score is " + score;
-    //Let user enter initials
 }
 
 

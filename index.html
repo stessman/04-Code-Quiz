@@ -9,13 +9,17 @@
     <title>Code Quiz</title>
 </head>
 <body>
-    <p>View Highscores</p>
+    <a href="highscore.html">View Highscores</a>
     <p id="timer"></p>
     <div id= "divForCenter">
+    <h1>Coding Quiz Challenge</h1>
+    <div id="infoArea">
+    <p id="info">Try to answer the following code-related questions within the time limit. Keep in mind that incorrect answers will penalize your score/time by ten seconds</p>
+    </div>
     <button id = "startButton" type="button">Start Quiz</button>
     <p id="questionField"></p>
     <p id="userScoreField"></p>
-    <form>
+    <form id="initialsForm">
         <label for="initials">Your Initials: </label>
         <input type="text" id= "initials" name= "initials">
         <input type= "button" id= "submitButton" value="Submit">
@@ -28,8 +32,8 @@
         <li data-number = "4"></li>
     </ol>
     </div>
-    </div>
     <div id = "correctWrongArea"></div>
+    </div>
     
     <script src="./assets/js/script.js"></script>
 </body>
