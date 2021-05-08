@@ -1,9 +1,9 @@
 let questions = {
-    questionOne : ["The Correct answer is 2", "answer one", "answer two", "answer three", "answer four", "2"],
-    questionTwo : ["The Correct answer is 1", "answer one", "answer two", "answer three", "answer four", "1"],
-    questionThree : ["The Correct answer is 4", "answer one", "answer two", "answer three", "answer four", "4"],
-    questionFour : ["The Correct answer is 3", "answer one", "answer two", "answer three", "answer four", "3"],
-    questionFive : ["The Correct answer is 3", "answer one", "answer two", "answer three", "answer four", "3"]
+    questionOne : ["Commonly used data types DO NOT include:", "strings", "booleans", "alerts", "numbers", "3"],
+    questionTwo : ["The condition in an if / else statement is enclosed within ____.", "quotes", "curly brackets", "parenthesis", "square brackets", "3"],
+    questionThree : ["Arrays in JavaScript can be used to store ____.", "numbers and strings", "other arrays", "booleans", "all of the above", "4"],
+    questionFour : ["String values must be enclosed within ____ when being assigned to variables.", "commas", "curly brackets", "quotes", "parenthesis", "3"],
+    questionFive : ["A very useful tool used during development and debugging for printing content to the debugger is:", "javascript", "terminal/bash", "for loops", "console log", "4"]
 }
 let questionField = document.querySelector("#questionField");
 let startButton = document.querySelector("#startButton");
@@ -79,7 +79,7 @@ function handleAnswerClick (event) {
     userGuess = userSelection.getAttribute("data-number");
     console.log("I clicked " + userSelection.getAttribute("data-number"));
     verifyUserGuess();
-    if (questionNumber < 4) {
+    if (questionNumber < 5) {
         fillQuestionaire();
     } else {
         gameEnd();
@@ -122,12 +122,3 @@ function newScore(){
     };
     localStorage.setItem("Highscorer", JSON.stringify(user));
 }
-
-
-
-
-
-/* Left to do:
-- Game end
-- Actual questions and answers
-*/

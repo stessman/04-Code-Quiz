@@ -73,3 +73,12 @@ a {
 #highscore {
     margin-bottom: 10px;
 }
+
+#answers li:hover {
+    background-color: rgb(155, 111, 155);
+}
+
+#correctWrongArea {
+    color: grey;
+    font-size: 20px;
+}
