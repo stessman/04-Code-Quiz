@@ -15,6 +15,11 @@ let answerItems = document.querySelector("#answers");
 let correctWrongArea = document.querySelector("#correctWrongArea");
 let userScoreField = document.querySelector("#userScoreField");
 let initialsForm = document.querySelector("#initialsForm");
+let quizHeading = document.querySelector("#quizHeading");
+let infoParagraph = document.querySelector("#info");
+let submitButton = document.querySelector("#submitButton");
+let initialsField = document.querySelector("#initials");
+let userInitialsFromField;
 let timer;
 let userGuess;
 let getQuestionInfo;
@@ -23,10 +28,13 @@ let gameOver = false;
 
 startButton.addEventListener("click", init);
 answerItems.addEventListener("click", handleAnswerClick);
+submitButton.addEventListener("click", newScore);
 
 // Resets the page for a new quiz
 function init() {
     startButton.style.display = "none";
+    infoParagraph.style.display = "none";
+    quizHeading.style.display = "none";
     gameOver = false;
     timer = 75;
     questionNumber = 0;
@@ -105,13 +113,21 @@ function gameEnd() {
     userScoreField.innerHTML = "Your final score is " + score;
 }
 
+//Stores the users initials and score in local storage
+function newScore(){
+    userInitialsFromField = initialsField.value;
+    var user = {
+        initials : userInitialsFromField,
+        userScore : score
+    };
+    localStorage.setItem("Highscorer", JSON.stringify(user));
+}
+
+
 
 
 
 /* Left to do:
-- View Highscores top left
 - Game end
-- top scores screen
-- Timer you lose logic and wrong answer deductions
 - Actual questions and answers
 */

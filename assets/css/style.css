@@ -1,7 +1,6 @@
 #timer {
-    position: relative;
-    display: flex;
-    justify-content :flex-end;
+    position: absolute;
+    right: 0%;
     margin-right: 20px;
 }
 
@@ -47,5 +46,30 @@ a {
 }
 
 #info {
-    width: 40%;
+    width: 45%;
+    margin-bottom: 8px;
+}
+
+#questionField {
+    font-weight: bold;
+    font-size: 27px;
+    margin-bottom: 8px;
+}
+
+#userScoreField {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+#quizHeading {
+    font-size: 27px;
+    margin-bottom: 8px;
+}
+
+#highScoreHeader {
+    margin-bottom: 20px;
+}
+
+#highscore {
+    margin-bottom: 10px;
 }

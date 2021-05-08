@@ -12,7 +12,7 @@
     <a href="highscore.html">View Highscores</a>
     <p id="timer"></p>
     <div id= "divForCenter">
-    <h1>Coding Quiz Challenge</h1>
+    <h1 id="quizHeading">Coding Quiz Challenge</h1>
     <div id="infoArea">
     <p id="info">Try to answer the following code-related questions within the time limit. Keep in mind that incorrect answers will penalize your score/time by ten seconds</p>
     </div>
@@ -22,7 +22,7 @@
     <form id="initialsForm">
         <label for="initials">Your Initials: </label>
         <input type="text" id= "initials" name= "initials">
-        <input type= "button" id= "submitButton" value="Submit">
+        <input type= "button" id= "submitButton" value="Submit" onclick = "location.href = 'highscore.html';">
     </form>
     <div id="lister">
     <ol id="answers">
@@ -34,7 +34,6 @@
     </div>
     <div id = "correctWrongArea"></div>
     </div>
-    
     <script src="./assets/js/script.js"></script>
 </body>
 </html>

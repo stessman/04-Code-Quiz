@@ -10,11 +10,29 @@
 </head>
 <body>
     <div id="highscoreArea">
-        <p>Highscores</p>
+        <p id = "highScoreHeader">Highscores</p>
+        <div id="lister">
         <ol id="highscoresGoHere"></ol>
+        <li id="highscore"></li>
+        </div>
         <a href="index.html"><input type= "button" id= "goBackButton" value="Go Back"></a>
         <input type= "button" id= "clearButton" value="Clear Highscores">
     </div>
-    <script src="./assets/js/script.js"></script>
+    <script>
+    var userInfo = JSON.parse(localStorage.getItem("Highscorer"));
+    if (userInfo === null ) {
+        document.querySelector("#highscore").style.display = "none";
+    }else {
+        document.querySelector("#highscore").style.display = "block";
+        document.querySelector("#highscore").innerHTML = userInfo.initials + " - " + userInfo.userScore;
+    }
+    document.querySelector("#clearButton").addEventListener("click", clearHighScore)
+
+    function clearHighScore () {
+        localStorage.removeItem("Highscorer");
+        document.querySelector("#highscore").style.display = "none";
+    }
+
+</script>
 </body>
 </html>
